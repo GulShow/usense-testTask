@@ -1,0 +1,22 @@
+<p class="heading">
+ Usense Test Task
+</p>
+
+<p>
+  Please enter a new password:
+</p>
+
+<p>
+  <input
+    type="password"
+    passwordStrength
+    #passwordRef
+    #password="passwordStrength"
+  />
+</p>
+
+<password-strength-indicator
+  *ngIf="passwordRef.value"
+  [strength]="password.strength"
+  class="indicator">
+</password-strength-indicator>
